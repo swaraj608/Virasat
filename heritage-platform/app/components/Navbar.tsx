@@ -7,13 +7,13 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="group">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#241f1a] text-lg font-bold text-white transition duration-300 group-hover:rotate-3">
-              M
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#241f1a] text-lg text-white transition duration-300 group-hover:rotate-3">
+              V
             </div>
 
             <div>
               <p className="text-lg font-bold leading-none tracking-tight">
-                MAATI
+                Virasat
               </p>
 
               <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-[#81776c]">
