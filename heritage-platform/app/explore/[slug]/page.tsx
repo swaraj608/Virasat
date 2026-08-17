@@ -8,24 +8,27 @@ const heritageData = {
     region: "Bihar",
     location: "Bihar",
     symbol: "☀️",
-    color: "bg-[#ead8c6]",
+    accent: "bg-[#f1e4d6]",
     intro:
-      "Chhath Puja is one of the most important cultural and spiritual traditions associated with Bihar. The celebration is closely connected with devotion to the Sun, rivers and community.",
-    sections: [
+      "Chhath Puja is one of Bihar's most deeply rooted cultural traditions, centred around devotion, nature, family and community.",
+    story: [
       {
+        number: "01",
         title: "The tradition",
         text:
-          "Families and communities come together through a series of rituals, preparation, fasting and offerings. The setting around rivers and other water bodies becomes an important part of the experience.",
+          "Chhath is observed through a series of rituals, preparation, fasting and offerings. Rivers, ponds and other water bodies become important spaces for the community.",
       },
       {
-        title: "Why it matters",
+        number: "02",
+        title: "A connection with nature",
         text:
-          "Beyond the rituals themselves, Chhath represents community, gratitude, discipline and a strong connection between people and nature.",
+          "The Sun and water occupy a central place in the celebration. The tradition reflects gratitude towards nature and the forces believed to sustain life.",
       },
       {
-        title: "A living heritage",
+        number: "03",
+        title: "Community and memory",
         text:
-          "The tradition continues to be practiced across generations, making it an important example of living cultural heritage.",
+          "Families often experience Chhath together across generations. Songs, rituals, food and shared preparation become part of collective memory.",
       },
     ],
   },
@@ -36,24 +39,27 @@ const heritageData = {
     region: "Bihar",
     location: "Madhubani, Bihar",
     symbol: "🎨",
-    color: "bg-[#ead8c6]",
+    accent: "bg-[#eadfd3]",
     intro:
-      "Madhubani painting is a distinctive artistic tradition from the Mithila region of Bihar, known for its strong visual language, patterns and storytelling.",
-    sections: [
+      "Madhubani painting is a distinctive artistic tradition from the Mithila region, carrying stories through patterns, symbols and colour.",
+    story: [
       {
-        title: "The art",
+        number: "01",
+        title: "The visual language",
         text:
-          "Traditional works often use strong lines, repeated patterns and carefully arranged forms to represent people, nature, mythology and everyday life.",
+          "Traditional Madhubani paintings use strong outlines, repeated patterns and carefully arranged forms to represent nature, mythology, people and everyday life.",
       },
       {
-        title: "The community",
+        number: "02",
+        title: "Stories on walls",
         text:
-          "The art has been passed through generations and continues to be practiced by artists who preserve and reinterpret the tradition.",
+          "The tradition historically appeared on walls and surfaces within homes, turning everyday spaces into places of artistic and cultural expression.",
       },
       {
-        title: "A living heritage",
+        number: "03",
+        title: "An evolving tradition",
         text:
-          "Today, Madhubani art can be found beyond traditional walls and surfaces, while still maintaining connections to its cultural roots.",
+          "Artists continue to preserve the visual identity of Madhubani while adapting it to new materials, audiences and contemporary themes.",
       },
     ],
   },
@@ -64,24 +70,27 @@ const heritageData = {
     region: "Bihar",
     location: "Nalanda, Bihar",
     symbol: "🏛️",
-    color: "bg-[#e2d7c8]",
+    accent: "bg-[#e4ddd3]",
     intro:
-      "Nalanda Mahavihara represents one of the most remarkable chapters in the intellectual history of the Indian subcontinent.",
-    sections: [
+      "Nalanda Mahavihara represents a remarkable chapter in the intellectual and cultural history of the Indian subcontinent.",
+    story: [
       {
+        number: "01",
         title: "A centre of learning",
         text:
-          "Nalanda became an important centre of Buddhist learning and attracted scholars and students from different parts of Asia.",
+          "Nalanda developed into a major centre of Buddhist learning and attracted students and scholars from different parts of Asia.",
       },
       {
-        title: "The archaeological remains",
+        number: "02",
+        title: "The ancient landscape",
         text:
-          "The ruins preserve evidence of monasteries, temples and a sophisticated educational environment.",
+          "The surviving archaeological remains reveal monasteries, temples and a complex environment dedicated to learning and spiritual life.",
       },
       {
-        title: "Why it matters today",
+        number: "03",
+        title: "A legacy of knowledge",
         text:
-          "Nalanda connects the modern visitor with a long history of scholarship, cultural exchange and intellectual life.",
+          "Nalanda continues to represent the importance of scholarship, cultural exchange and intellectual curiosity across generations.",
       },
     ],
   },
@@ -91,25 +100,28 @@ const heritageData = {
     category: "Folk Art",
     region: "Jharkhand",
     location: "Jharkhand",
-    symbol: "🌿",
-    color: "bg-[#dce5d6]",
+    symbol: "🎨",
+    accent: "bg-[#dfe7da]",
     intro:
-      "Sohrai art is a traditional form of wall painting associated with the cultural life of communities in Jharkhand.",
-    sections: [
+      "Sohrai art is a traditional wall-art practice connected with nature, agriculture and the cultural life of communities in Jharkhand.",
+    story: [
       {
-        title: "The visual language",
+        number: "01",
+        title: "Art and nature",
         text:
-          "The art uses natural forms, animals, plants and geometric patterns to create distinctive visual compositions.",
+          "Animals, plants and natural forms frequently appear in Sohrai compositions, reflecting a close relationship between artistic expression and the surrounding environment.",
       },
       {
-        title: "Connection with nature",
+        number: "02",
+        title: "The walls become a canvas",
         text:
-          "Nature, agriculture and community life are closely reflected in the themes and practice of the tradition.",
+          "Traditional homes can become spaces of artistic expression, particularly around important cultural occasions and seasonal celebrations.",
       },
       {
-        title: "A living tradition",
+        number: "03",
+        title: "Passed through generations",
         text:
-          "Sohrai continues to be practiced and passed between generations, connecting contemporary communities with their cultural heritage.",
+          "The practice continues through community knowledge, with artists carrying traditional techniques while also developing their own visual styles.",
       },
     ],
   },
@@ -120,24 +132,27 @@ const heritageData = {
     region: "Jharkhand",
     location: "Jharkhand",
     symbol: "🌸",
-    color: "bg-[#dce5d6]",
+    accent: "bg-[#dfe7da]",
     intro:
-      "Sarhul is a spring festival associated with nature, community and the cultural traditions of several indigenous communities in Jharkhand.",
-    sections: [
+      "Sarhul is a spring festival deeply connected with nature, community and the cultural traditions of Jharkhand.",
+    story: [
       {
-        title: "The celebration",
+        number: "01",
+        title: "Welcoming spring",
         text:
-          "The arrival of spring becomes an occasion for communities to gather, celebrate and express their relationship with nature.",
+          "The festival marks an important seasonal moment and brings communities together through rituals, gatherings and celebration.",
       },
       {
-        title: "The sal tree",
+        number: "02",
+        title: "The sacred sal tree",
         text:
-          "The sal tree has an important symbolic and cultural presence within the festival and its traditions.",
+          "The sal tree holds an important place within the cultural symbolism of Sarhul and represents the close relationship between community and nature.",
       },
       {
-        title: "Community",
+        number: "03",
+        title: "Music, dance and community",
         text:
-          "Music, dance, rituals and collective participation help make Sarhul a strong expression of community identity.",
+          "Collective celebrations, traditional music and dance help make Sarhul a powerful expression of cultural identity.",
       },
     ],
   },
@@ -148,24 +163,27 @@ const heritageData = {
     region: "Jharkhand",
     location: "Deoghar, Jharkhand",
     symbol: "🛕",
-    color: "bg-[#dce5d6]",
+    accent: "bg-[#e3e0d7]",
     intro:
-      "Deoghar is an important pilgrimage centre in Jharkhand, with traditions that have shaped the cultural identity of the region.",
-    sections: [
+      "Deoghar is an important pilgrimage centre whose traditions have become deeply connected with the cultural landscape of Jharkhand.",
+    story: [
       {
+        number: "01",
         title: "A pilgrimage landscape",
         text:
-          "The city attracts pilgrims and visitors whose journeys form an important part of its cultural life.",
+          "Pilgrims and visitors have shaped the cultural life of Deoghar, creating traditions that extend beyond the physical temple structures.",
       },
       {
-        title: "Living traditions",
+        number: "02",
+        title: "Living rituals",
         text:
-          "Religious practices, rituals, gatherings and local customs continue to shape the experience of the place.",
+          "Religious practices, gatherings and local customs continue to give the place its distinctive cultural character.",
       },
       {
-        title: "Beyond a monument",
+        number: "03",
+        title: "Heritage beyond architecture",
         text:
-          "The heritage of Deoghar is not limited to architecture. It also lives through people, rituals and shared cultural memory.",
+          "The heritage of Deoghar lives through people, memories, rituals and shared experiences as much as through its historic places.",
       },
     ],
   },
@@ -186,16 +204,16 @@ export default async function HeritageDetailPage({
       <main className="min-h-screen bg-[#f8f5ef] text-[#241f1a]">
         <Navbar />
 
-        <section className="px-6 py-24">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="text-6xl">🔎</p>
+        <section className="flex min-h-[70vh] items-center justify-center px-6">
+          <div className="max-w-xl text-center">
+            <div className="text-6xl">🔎</div>
 
             <h1 className="mt-6 text-4xl font-bold">
               Heritage story not found
             </h1>
 
-            <p className="mt-4 text-[#766d63]">
-              We couldn't find the heritage story you're looking for.
+            <p className="mt-4 leading-7 text-[#6f675e]">
+              This story doesn't exist yet in Virasat.
             </p>
 
             <Link
@@ -214,79 +232,93 @@ export default async function HeritageDetailPage({
     <main className="min-h-screen bg-[#f8f5ef] text-[#241f1a]">
       <Navbar />
 
-      {/* Hero */}
-      <section className="px-6 pb-16 pt-12 md:pb-24 md:pt-20">
+      {/* HERO */}
+      <section className="px-6 pb-20 pt-10 md:pb-28 md:pt-16">
         <div className="mx-auto max-w-7xl">
           <Link
             href="/explore"
-            className="text-sm font-medium text-[#766d63] hover:text-[#241f1a]"
+            className="text-sm font-medium text-[#756c62] transition hover:text-[#241f1a]"
           >
             ← Back to Explore
           </Link>
 
-          <div className="mt-10 grid items-center gap-12 lg:grid-cols-2">
+          <div className="mt-12 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+            {/* TEXT */}
             <div>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap gap-3">
                 <span className="rounded-full bg-[#241f1a] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white">
                   {heritage.category}
                 </span>
 
-                <span className="rounded-full border border-[#d7cec3] bg-white px-4 py-2 text-xs font-medium">
+                <span className="rounded-full border border-[#d8cec3] bg-white px-4 py-2 text-xs font-medium">
                   {heritage.region}
                 </span>
               </div>
 
-              <h1 className="mt-7 text-5xl font-bold leading-tight md:text-7xl">
+              <h1 className="mt-7 text-5xl font-bold leading-[0.95] tracking-tight md:text-7xl">
                 {heritage.title}
               </h1>
 
-              <p className="mt-5 text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
+              <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#9a5b32]">
                 {heritage.location}
               </p>
 
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-[#6f675e]">
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-[#6f675e] md:text-xl">
                 {heritage.intro}
               </p>
             </div>
 
+            {/* VISUAL */}
             <div
-              className={`flex aspect-square items-center justify-center rounded-[2rem] ${heritage.color} shadow-xl`}
+              className={`relative flex aspect-square items-center justify-center overflow-hidden rounded-[2.5rem] ${heritage.accent}`}
             >
-              <span className="text-[9rem] transition duration-500 hover:scale-110 md:text-[12rem]">
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border-[40px] border-white/30" />
+
+              <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full border-[50px] border-white/20" />
+
+              <span className="relative text-[9rem] transition duration-700 hover:scale-110 md:text-[12rem]">
                 {heritage.symbol}
               </span>
+
+              <div className="absolute bottom-6 left-6 rounded-full bg-white/70 px-4 py-2 text-xs font-medium backdrop-blur">
+                Virasat · {heritage.region}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="bg-white px-6 py-20">
+      {/* STORY */}
+      <section className="bg-white px-6 py-20 md:py-28">
         <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
-            Discover the story
-          </p>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9a5b32]">
+              The story
+            </p>
 
-          <div className="mt-10 space-y-14">
-            {heritage.sections.map((section, index) => (
+            <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+              Discover the layers behind it.
+            </h2>
+          </div>
+
+          <div className="mt-16">
+            {heritage.story.map((section, index) => (
               <article
-                key={section.title}
-                className="border-b border-[#e5ddd4] pb-12 last:border-0"
+                key={section.number}
+                className="grid gap-6 border-t border-[#e5ddd4] py-12 md:grid-cols-[80px_1fr]"
               >
-                <div className="flex gap-6">
-                  <span className="text-sm font-bold text-[#b18a68]">
-                    0{index + 1}
-                  </span>
+                <div className="text-sm font-bold text-[#b18a68]">
+                  {section.number}
+                </div>
 
-                  <div>
-                    <h2 className="text-3xl font-bold">
-                      {section.title}
-                    </h2>
+                <div>
+                  <h3 className="text-3xl font-bold">
+                    {section.title}
+                  </h3>
 
-                    <p className="mt-5 text-lg leading-8 text-[#6f675e]">
-                      {section.text}
-                    </p>
-                  </div>
+                  <p className="mt-5 max-w-2xl text-lg leading-8 text-[#6f675e]">
+                    {section.text}
+                  </p>
                 </div>
               </article>
             ))}
@@ -294,28 +326,45 @@ export default async function HeritageDetailPage({
         </div>
       </section>
 
-      {/* Community CTA */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2rem] bg-[#241f1a] px-8 py-14 text-center text-white md:px-16">
-          <p className="text-sm uppercase tracking-widest text-[#d9a77c]">
-            Keep the story alive
+      {/* CULTURAL MEMORY */}
+      <section className="px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-[#ddd3c8] bg-[#eee7de] px-8 py-14 text-center md:px-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9a5b32]">
+            Cultural memory
           </p>
 
           <h2 className="mt-5 text-4xl font-bold md:text-5xl">
-            Do you know something we should add?
+            Heritage isn't only about the past.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6f675e]">
+            It lives through the people who practice it, remember it,
+            teach it and pass it forward.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-[#241f1a] px-8 py-16 text-center text-white md:px-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#d9a77c]">
+            Keep the story alive
+          </p>
+
+          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold md:text-5xl">
+            Do you know a story that belongs here?
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-white/60">
-            Share your own memories, traditions or local knowledge
-            and help preserve the cultural heritage of Bihar and
-            Jharkhand.
+            Share a memory, tradition, festival, place or local story
+            and help build Virasat together.
           </p>
 
           <Link
             href="/contribute"
             className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-medium text-[#241f1a] transition hover:-translate-y-1"
           >
-            Contribute a Story →
+            Contribute Your Story →
           </Link>
         </div>
       </section>
