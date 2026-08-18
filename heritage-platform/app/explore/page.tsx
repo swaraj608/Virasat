@@ -1,9 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-import HeritageMap from "../components/HeritageMap";
+
+const HeritageMap = dynamic(
+  () => import("../components/HeritageMap"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-[500px] w-full items-center justify-center rounded-[2rem] border border-[#ddd3c8] bg-[#f8f5ef] text-[#6f675e]">
+        Loading map...
+      </div>
+    ),
+  }
+);
 
 const heritageItems = [
   {
@@ -180,31 +192,29 @@ export default function ExplorePage() {
         </div>
       </section>
 
+      {/* HERITAGE MAP */}
+      <section className="px-6 py-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#9a5b32]">
+              Explore by place
+            </p>
 
-{/* HERITAGE MAP */}
-<section className="px-6 py-16">
-  <div className="mx-auto max-w-7xl">
-    <div className="max-w-3xl">
-      <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#9a5b32]">
-        Explore by place
-      </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Discover heritage across Bihar & Jharkhand
+            </h2>
 
-      <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-        Discover heritage across Bihar & Jharkhand
-      </h2>
+            <p className="mt-4 max-w-2xl leading-7 text-[#6f675e]">
+              Explore the region geographically and discover places connected
+              to the cultural stories of Virasat.
+            </p>
+          </div>
 
-      <p className="mt-4 max-w-2xl leading-7 text-[#6f675e]">
-        Explore the region geographically and discover places connected
-        to the cultural stories of Virasat.
-      </p>
-    </div>
-
-    <div className="mt-8">
-      <HeritageMap />
-    </div>
-  </div>
-</section>
-
+          <div className="mt-8">
+            <HeritageMap />
+          </div>
+        </div>
+      </section>
 
       {/* CATEGORIES */}
       <section className="px-6 pt-16">
