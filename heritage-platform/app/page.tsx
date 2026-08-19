@@ -1,14 +1,17 @@
+import Image from "next/image";
 import Navbar from "./components/Navbar";
 
 const categories = [
   {
     title: "Festivals",
-    description: "Discover celebrations, rituals and stories passed through generations.",
+    description:
+      "Discover celebrations, rituals and stories passed through generations.",
     symbol: "🪔",
   },
   {
     title: "Folk Art",
-    description: "Explore traditional art forms created by local communities.",
+    description:
+      "Explore traditional art forms created by local communities.",
     symbol: "🎨",
   },
   {
@@ -48,19 +51,25 @@ const featured = [
     title: "Chhath Puja",
     location: "Bihar",
     category: "Festival",
-    symbol: "☀️",
+    image: "/images/chhath-puja.jpeg",
+    description:
+      "A deeply rooted festival of devotion, gratitude and connection with the Sun.",
   },
   {
     title: "Madhubani Art",
     location: "Madhubani, Bihar",
     category: "Folk Art",
-    symbol: "🎨",
+    image: "/images/madhubani-art.jpeg",
+    description:
+      "A vibrant traditional painting style carrying stories, symbols and generations of artistic knowledge.",
   },
   {
     title: "Sohrai Art",
     location: "Jharkhand",
     category: "Tradition",
-    symbol: "🌿",
+    image: "/images/sohrai-art.jpeg",
+    description:
+      "A traditional wall-art practice celebrating nature, harvest and community life.",
   },
 ];
 
@@ -85,12 +94,56 @@ const experiences = [
   },
 ];
 
+const cultureVaultItems = [
+  {
+    icon: "🍲",
+    title: "Traditional Recipes",
+  },
+  {
+    icon: "📖",
+    title: "Oral Histories",
+  },
+  {
+    icon: "🎵",
+    title: "Folk Songs",
+  },
+  {
+    icon: "🧵",
+    title: "Craft Knowledge",
+  },
+];
+
+const missionItems = [
+  {
+    number: "01",
+    title: "Discover",
+    text: "Explore India's cultural heritage.",
+  },
+  {
+    number: "02",
+    title: "Experience",
+    text: "Connect with traditions and communities.",
+  },
+  {
+    number: "03",
+    title: "Contribute",
+    text: "Share stories, memories and knowledge.",
+  },
+  {
+    number: "04",
+    title: "Preserve",
+    text: "Keep culture alive for future generations.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f5ef] text-[#241f1a]">
       <Navbar />
 
-      {/* HERO */}
+      {/* =========================================================
+          HERO
+      ========================================================= */}
       <section className="relative overflow-hidden px-6 pb-24 pt-12 md:pb-32 md:pt-20">
         <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#e7c9a9]/40 blur-3xl" />
 
@@ -98,11 +151,11 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl">
           <div className="grid items-center gap-14 lg:grid-cols-2">
-
             {/* LEFT */}
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d8cfc3] bg-white/70 px-4 py-2 text-sm shadow-sm">
                 <span className="text-[#9a5b32]">✦</span>
+
                 <span>Discover the living heritage of India</span>
               </div>
 
@@ -115,9 +168,8 @@ export default function Home() {
               </h1>
 
               <p className="mt-7 max-w-xl text-lg leading-8 text-[#6f675e] md:text-xl">
-                Explore festivals, folk art, food, traditions,
-                historical places and the stories that keep our
-                heritage alive.
+                Explore festivals, folk art, food, traditions, historical
+                places and the stories that keep our heritage alive.
               </p>
 
               {/* SEARCH */}
@@ -133,7 +185,7 @@ export default function Home() {
 
                   <button
                     type="button"
-                    className="rounded-xl bg-[#241f1a] px-5 py-3 text-sm font-medium text-white"
+                    className="rounded-xl bg-[#241f1a] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#3b322b]"
                   >
                     Search
                   </button>
@@ -149,7 +201,7 @@ export default function Home() {
                       <button
                         key={item}
                         type="button"
-                        className="rounded-full border border-[#ddd4ca] bg-white/60 px-3 py-1.5 text-xs transition hover:border-[#b9784d]"
+                        className="rounded-full border border-[#ddd4ca] bg-white/60 px-3 py-1.5 text-xs transition hover:border-[#b9784d] hover:bg-white"
                       >
                         {item}
                       </button>
@@ -179,6 +231,7 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-[#ddd4ca] pt-7">
                 <div>
                   <p className="text-2xl font-bold">100+</p>
+
                   <p className="mt-1 text-sm text-[#81776c]">
                     Heritage stories
                   </p>
@@ -186,6 +239,7 @@ export default function Home() {
 
                 <div>
                   <p className="text-2xl font-bold">30+</p>
+
                   <p className="mt-1 text-sm text-[#81776c]">
                     Traditions
                   </p>
@@ -193,6 +247,7 @@ export default function Home() {
 
                 <div>
                   <p className="text-2xl font-bold">2</p>
+
                   <p className="mt-1 text-sm text-[#81776c]">
                     States
                   </p>
@@ -204,10 +259,13 @@ export default function Home() {
             <div className="relative mx-auto w-full max-w-xl">
               <div className="overflow-hidden rounded-[2rem] bg-[#241f1a] p-3 shadow-2xl">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
-                  <img
+                  <Image
                     src="/images/hero-heritage.jpeg"
                     alt="Traditional Indian cultural heritage"
-                    className="h-full w-full object-cover"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-[#241f1a]/95 via-[#241f1a]/20 to-transparent" />
@@ -247,9 +305,10 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* FLOATING DISCOVERY CARD */}
               <div className="absolute -bottom-6 -left-3 rounded-2xl border border-[#ded5ca] bg-white p-4 shadow-xl sm:-left-8">
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-[#9a5b32]">
-                  Today's discovery
+                  Today&apos;s discovery
                 </p>
 
                 <p className="mt-2 font-semibold">
@@ -261,12 +320,13 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* EXPLORE */}
+      {/* =========================================================
+          EXPLORE
+      ========================================================= */}
       <section className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
@@ -280,8 +340,8 @@ export default function Home() {
               </h2>
 
               <p className="mt-4 max-w-2xl text-[#766d63]">
-                Explore festivals, food, art, music, stories,
-                traditions and historical places.
+                Explore festivals, food, art, music, stories, traditions and
+                historical places.
               </p>
             </div>
 
@@ -323,46 +383,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED */}
+      {/* =========================================================
+          FEATURED HERITAGE
+      ========================================================= */}
       <section className="bg-[#f1ece4] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
-            Featured heritage
-          </p>
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
+                Featured heritage
+              </p>
 
-          <h2 className="mt-3 max-w-2xl text-4xl font-bold md:text-5xl">
-            Start with a story from the region.
-          </h2>
+              <h2 className="mt-3 max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">
+                Stories that deserve to be remembered.
+              </h2>
 
+              <p className="mt-4 max-w-2xl text-[#766d63]">
+                Explore living traditions, artistic expressions and
+                celebrations from Bihar and Jharkhand.
+              </p>
+            </div>
+
+            <a
+              href="/explore"
+              className="font-medium underline underline-offset-4"
+            >
+              View all heritage →
+            </a>
+          </div>
+
+          {/* FEATURED CARDS */}
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {featured.map((item) => (
               <a
                 key={item.title}
                 href="/explore"
-                className="group overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-2xl"
+                className="group overflow-hidden rounded-[2rem] bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="flex h-64 items-center justify-center bg-[#d9c2a9] text-7xl transition group-hover:scale-105">
-                  {item.symbol}
-                </div>
+                {/* IMAGE */}
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-110"
+                  />
 
-                <div className="p-7">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-[#9a5b32]">
+                  {/* IMAGE OVERLAY */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+
+                  {/* CATEGORY */}
+                  <div className="absolute left-5 top-5">
+                    <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#9a5b32] shadow-sm backdrop-blur">
                       {item.category}
-                    </span>
-
-                    <span className="text-xs text-[#82786d]">
-                      {item.location}
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-2xl font-bold">
-                    {item.title}
-                  </h3>
+                  {/* LOCATION + TITLE */}
+                  <div className="absolute bottom-5 left-5 right-16">
+                    <p className="text-xs font-medium uppercase tracking-widest text-white/75">
+                      📍 {item.location}
+                    </p>
 
-                  <p className="mt-5 font-medium">
-                    Discover story →
+                    <h3 className="mt-2 text-3xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {/* ARROW */}
+                  <div className="absolute bottom-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-lg text-[#241f1a] transition duration-300 group-hover:translate-x-1 group-hover:bg-[#e7c9a9]">
+                    →
+                  </div>
+                </div>
+
+                {/* CARD CONTENT */}
+                <div className="p-6">
+                  <p className="leading-7 text-[#766d63]">
+                    {item.description}
                   </p>
+
+                  <div className="mt-5 flex items-center justify-between border-t border-[#eee7df] pt-5">
+                    <span className="text-sm font-semibold text-[#241f1a]">
+                      Discover story
+                    </span>
+
+                    <span className="text-[#9a5b32] transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
                 </div>
               </a>
             ))}
@@ -370,7 +479,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EXPERIENCES */}
+      {/* =========================================================
+          EXPERIENCES
+      ========================================================= */}
       <section className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
@@ -378,7 +489,7 @@ export default function Home() {
           </p>
 
           <h2 className="mt-3 max-w-3xl text-4xl font-bold md:text-5xl">
-            Don't just read about heritage.
+            Don&apos;t just read about heritage.
             <span className="block text-[#9a5b32]">
               Experience it.
             </span>
@@ -391,7 +502,7 @@ export default function Home() {
                 href="/experiences"
                 className="group overflow-hidden rounded-3xl border border-[#e4ddd5] bg-[#faf8f4] transition hover:-translate-y-2 hover:bg-white hover:shadow-xl"
               >
-                <div className="flex h-52 items-center justify-center bg-[#d9c2a9] text-7xl">
+                <div className="flex h-52 items-center justify-center bg-[#d9c2a9] text-7xl transition group-hover:scale-105">
                   {experience.symbol}
                 </div>
 
@@ -418,7 +529,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI GUIDE */}
+      {/* =========================================================
+          AI GUIDE
+      ========================================================= */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-10 rounded-[2rem] bg-[#241f1a] p-8 text-white md:p-14 lg:grid-cols-2">
@@ -435,35 +548,58 @@ export default function Home() {
               </h2>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Learn about festivals, art, food, historical places
-                and cultural traditions through an intelligent
-                cultural guide.
+                Learn about festivals, art, food, historical places and
+                cultural traditions through an intelligent cultural guide.
               </p>
 
               <a
                 href="/ai-guide"
-                className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-medium text-[#241f1a]"
+                className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-medium text-[#241f1a] transition hover:-translate-y-1 hover:shadow-lg"
               >
                 Meet the AI Guide →
               </a>
             </div>
 
+            {/* CHAT PREVIEW */}
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-              <div className="rounded-2xl bg-white/10 p-4 text-sm text-white/80">
-                Tell me about Sohrai painting and why it is important
-                to Jharkhand's culture.
+              <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9a5b32]">
+                  ✦
+                </div>
+
+                <div>
+                  <p className="font-semibold">
+                    Virasat AI Guide
+                  </p>
+
+                  <p className="text-xs text-white/40">
+                    Cultural knowledge assistant
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-2xl bg-white/10 p-4 text-sm leading-6 text-white/80">
+                Tell me about Sohrai painting and why it is important to
+                Jharkhand&apos;s culture.
               </div>
 
               <div className="mt-4 rounded-2xl bg-white p-4 text-sm leading-7 text-[#4d453e]">
-                Sohrai is a traditional wall-art form associated with
-                harvest, nature and community traditions.
+                Sohrai is a traditional wall-art form associated with harvest,
+                nature and community traditions.
+              </div>
+
+              <div className="mt-4 flex items-center gap-2 text-xs text-white/40">
+                <span className="h-2 w-2 rounded-full bg-[#d9a77c]" />
+                AI Cultural Guide
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CULTURE VAULT */}
+      {/* =========================================================
+          CULTURE VAULT
+      ========================================================= */}
       <section className="bg-[#f1ece4] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-medium uppercase tracking-widest text-[#9a5b32]">
@@ -475,26 +611,23 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-[#766d63]">
-            A digital archive for stories, recipes, songs,
-            traditions and cultural knowledge.
+            A digital archive for stories, recipes, songs, traditions and
+            cultural knowledge.
           </p>
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["🍲", "Traditional Recipes"],
-              ["📖", "Oral Histories"],
-              ["🎵", "Folk Songs"],
-              ["🧵", "Craft Knowledge"],
-            ].map(([icon, title]) => (
+            {cultureVaultItems.map((item) => (
               <a
-                key={title}
+                key={item.title}
                 href="/culture-vault"
-                className="rounded-3xl bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+                className="group rounded-3xl bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="text-4xl">{icon}</div>
+                <div className="text-4xl transition group-hover:scale-110">
+                  {item.icon}
+                </div>
 
                 <h3 className="mt-7 text-xl font-bold">
-                  {title}
+                  {item.title}
                 </h3>
 
                 <p className="mt-5 font-medium">
@@ -506,7 +639,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMMUNITY */}
+      {/* =========================================================
+          COMMUNITY
+      ========================================================= */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid overflow-hidden rounded-[2rem] bg-[#241f1a] text-white lg:grid-cols-2">
@@ -520,13 +655,13 @@ export default function Home() {
               </h2>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/60">
-                Share a recipe, festival, local legend, photograph,
-                song or tradition from your community.
+                Share a recipe, festival, local legend, photograph, song or
+                tradition from your community.
               </p>
 
               <a
                 href="/contribute"
-                className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-medium text-[#241f1a]"
+                className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-medium text-[#241f1a] transition hover:-translate-y-1 hover:shadow-lg"
               >
                 Contribute to Virasat →
               </a>
@@ -539,13 +674,20 @@ export default function Home() {
                 <p className="mt-8 text-2xl font-semibold">
                   Preserve. Share. Inspire.
                 </p>
+
+                <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-white/60">
+                  Every memory, recipe and tradition can become part of a
+                  larger cultural archive.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MISSION */}
+      {/* =========================================================
+          MISSION
+      ========================================================= */}
       <section className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl text-center">
           <p className="text-sm uppercase tracking-widest text-[#9a5b32]">
@@ -557,26 +699,21 @@ export default function Home() {
           </h2>
 
           <div className="mt-14 grid gap-6 md:grid-cols-4">
-            {[
-              ["01", "Discover", "Explore India's cultural heritage."],
-              ["02", "Experience", "Connect with traditions and communities."],
-              ["03", "Contribute", "Share stories, memories and knowledge."],
-              ["04", "Preserve", "Keep culture alive for future generations."],
-            ].map(([number, title, text]) => (
+            {missionItems.map((item) => (
               <div
-                key={number}
-                className="rounded-3xl border border-[#e4ddd5] bg-[#faf8f4] p-7 text-left"
+                key={item.number}
+                className="rounded-3xl border border-[#e4ddd5] bg-[#faf8f4] p-7 text-left transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <span className="text-sm font-bold text-[#9a5b32]">
-                  {number}
+                  {item.number}
                 </span>
 
                 <h3 className="mt-7 text-xl font-bold">
-                  {title}
+                  {item.title}
                 </h3>
 
                 <p className="mt-3 leading-7 text-[#766d63]">
-                  {text}
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -584,7 +721,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* =========================================================
+          FINAL CTA
+      ========================================================= */}
       <section className="px-6 pb-24 pt-10">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#ded5ca] bg-[#faf7f1] px-8 py-16 text-center md:px-16">
           <p className="text-sm uppercase tracking-widest text-[#9a5b32]">
@@ -596,21 +735,21 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#766d63]">
-            Explore what has already been preserved or contribute
-            a story of your own.
+            Explore what has already been preserved or contribute a story of
+            your own.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="/explore"
-              className="rounded-full bg-[#241f1a] px-7 py-4 font-medium text-white"
+              className="rounded-full bg-[#241f1a] px-7 py-4 font-medium text-white transition hover:-translate-y-1 hover:shadow-xl"
             >
               Explore Heritage
             </a>
 
             <a
               href="/contribute"
-              className="rounded-full border border-[#cfc5b9] bg-white px-7 py-4 font-medium"
+              className="rounded-full border border-[#cfc5b9] bg-white px-7 py-4 font-medium transition hover:bg-[#f5f1eb]"
             >
               Contribute a Story
             </a>
@@ -618,7 +757,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* =========================================================
+          FOOTER
+      ========================================================= */}
       <footer className="border-t border-[#ddd4ca] bg-[#f1ece4] px-6 py-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-sm text-[#766d63] md:flex-row">
           <div>
@@ -632,11 +773,40 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap gap-6">
-            <a href="/explore">Explore</a>
-            <a href="/experiences">Experiences</a>
-            <a href="/culture-vault">CultureVault</a>
-            <a href="/contribute">Contribute</a>
-            <a href="/about">About</a>
+            <a
+              href="/explore"
+              className="transition hover:text-[#9a5b32]"
+            >
+              Explore
+            </a>
+
+            <a
+              href="/experiences"
+              className="transition hover:text-[#9a5b32]"
+            >
+              Experiences
+            </a>
+
+            <a
+              href="/culture-vault"
+              className="transition hover:text-[#9a5b32]"
+            >
+              CultureVault
+            </a>
+
+            <a
+              href="/contribute"
+              className="transition hover:text-[#9a5b32]"
+            >
+              Contribute
+            </a>
+
+            <a
+              href="/about"
+              className="transition hover:text-[#9a5b32]"
+            >
+              About
+            </a>
           </div>
         </div>
 
